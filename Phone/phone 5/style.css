@@ -1,0 +1,188 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f1f3f6;
+    padding: 20px;
+}
+
+/* MAIN LAYOUT */
+body {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* LEFT IMAGE */
+.phone1_img {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.phone1_img img {
+    width: 100%;
+    max-width: 300px;
+    object-fit: contain;
+}
+
+/* RIGHT SECTION */
+.discription {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    width: 65%;
+}
+
+/* TITLE */
+.discription h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* PRICE SECTION */
+.price {
+    margin-top: 15px;
+}
+
+.extra_discount {
+    color: green;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.final_price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.final_price h2 {
+    color: #000;
+}
+
+.original_price {
+    text-decoration: line-through;
+    color: gray;
+    font-size: 16px;
+}
+
+.discount {
+    color: green;
+    font-weight: bold;
+}
+
+/* WARRANTY */
+.warranty {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.apple_img {
+    width: 40px;
+}
+
+.warranty_para {
+    font-size: 13px;
+    color: #555;
+}
+
+/* DELIVERY */
+.delivery {
+    margin-top: 20px;
+}
+
+#pincode_input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 200px;
+}
+
+.check_BTN {
+    padding: 8px 12px;
+    background: #0c831f;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.check_BTN:hover {
+    background: #0a6e19;
+}
+
+/* HIGHLIGHTS */
+.highlights {
+    margin-top: 20px;
+}
+
+.Product_info {
+    margin-top: 10px;
+    padding-left: 20px;
+    color: #555;
+}
+
+/* RATING */
+.Rating {
+    margin-top: 25px;
+}
+
+.Rating h2 {
+    margin-bottom: 10px;
+}
+
+.Rating p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+/* QUESTIONS */
+.Question {
+    margin-top: 25px;
+}
+
+.Question h2 {
+    margin-bottom: 10px;
+}
+
+.Question h4 {
+    margin-top: 10px;
+}
+
+.Question p {
+    font-size: 14px;
+    color: #444;
+}
+
+/* DIVIDER */
+hr {
+    margin: 10px 0;
+    border: none;
+    height: 1px;
+    background: #ddd;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .phone1_img,
+    .discription {
+        width: 100%;
+    }
+}

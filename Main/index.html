@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get In Blink</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="logo">GetIn<span>Blink</span></div>
+    
+    <input type="text" placeholder="Search for products..." class="search">
+
+    <div class="header-right">
+        <button class="login">Login</button>
+        <button class="cart">Cart 🛒</button>
+    </div>
+</header>
+
+<!-- BANNER -->
+<section class="banner">
+    <h1>Groceries delivered in minutes</h1>
+    <p>Fresh fruits, vegetables & more</p>
+</section>
+
+<!-- CATEGORIES -->
+<section class="categories">
+    <h2>Shop by Category</h2>
+    <div class="category-container">
+        <a href="http://127.0.0.1:5501/fruit/fruit.html" class="category">Fruits</a>
+        <div class="category">Vegetables</div>
+        <div class="category">Dairy</div>
+        <div class="category">Snacks</div>
+        <div class="category">Beverages</div>
+        <a href="http://127.0.0.1:5501/Phone/Phone/phone.html" class="category">Phone</a>
+        <div class="category">Clouths</div>
+    </div>
+</section>
+
+<!-- PRODUCTS -->
+<div class="products">
+    <h2 class="products_heading">Popular Products</h2>
+    <div class="product-grid">
+        
+        <div class="product-card">
+            <img src="./image/Bread Image.webp">
+            <p class="weight">300g</p>
+            <h3>NATURBAKED Zero Maida Whole Wheat Bread</h3>
+            <div class="price-cart">
+                <p>₹60</p>
+                <button onclick="addToCart('Bread', 60)">Add</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="./image/Beetroot image.webp">
+            <p class="weight">250 - 300g</p>
+            <h3>Beetroot</h3>
+            <div class="price-cart">
+                <p>₹15</p>
+                <button onclick="addToCart('Beetroot', 15)">Add</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="./image/Kulcha Image.webp">
+            <p class="weight">250g</p>
+            <h3>BRITANIA Atta kulcha Bread</h3>
+            <div class="price-cart">
+                <p>₹45</p>
+                <button onclick="addToCart('kulcha', 45)">Add</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="./image/Milk Image.webp">
+            <p class="weight">250g</p>
+            <h3>Heritage Daily Health Toned Milk</h3>
+            <div class="price-cart">
+                <p>₹28</p>
+                <button onclick="addToCart('Milk', 28)">Add</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="./image/Ghee Image.webp">
+            <p class="weight">1L / 905g</p>
+            <h3>AMUL Pure Ghee Tetrapack</h3>
+            <div class="price-cart">
+                <p>₹700</p>
+                <button onclick="addToCart('Ghee', 700)">Add</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="./image/oil Image.webp">
+            <p class="weight">5L</p>
+            <h3>FORTUNE Kachi Ghani Oil</h3>
+            <div class="price-cart">
+                <p>₹700</p>
+                <button onclick="addToCart('Oil', 700)">Add</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="./image/Onion Image.webp">
+            <p class="weight">1kg</p>
+            <h3>Fresh Onion</h3>
+            <div class="price-cart">
+                <p>₹60</p>
+                <button onclick="addToCart('Onion', 60)">Add</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script>
+function addToCart(name, price) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    let existingProduct = cart.find(item => item.name === name);
+
+    if (existingProduct) {
+        existingProduct.quantity += 1;
+    } else {
+        cart.push({
+            name: name,
+            price: price,
+            quantity: 1
+        });
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert(name + " added to cart");
+}
+</script>
+
+</body>
+</html>

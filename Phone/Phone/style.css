@@ -1,0 +1,184 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f1f3f6;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: white;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #0c831f;
+}
+
+.search {
+    width: 40%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.header-right button {
+    margin-left: 10px;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.login {
+    background: #eee;
+}
+
+.cart {
+    background: #0c831f;
+    color: white;
+}
+
+/* COMMON PHONE CARD */
+.phone1,
+.phone2,
+.phone3,
+.phone4,
+.phone5 {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background: white;
+    margin: 20px;
+    border-radius: 12px;
+    transition: 0.3s;
+    align-items: center;
+}
+
+.phone1:hover,
+.phone2:hover,
+.phone3:hover,
+.phone4:hover,
+.phone5:hover {
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transform: translateY(-3px);
+}
+
+/* IMAGE */
+.phone1 img,
+.phone2 img,
+.phone3 img,
+.phone4 img,
+.phone5 img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+/* DESCRIPTION */
+.phone1_discription {
+    flex: 1;
+}
+
+.phone1_discription h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.phone1_discription ul {
+    font-size: 13px;
+    color: #555;
+    margin-top: 8px;
+    line-height: 1.6;
+}
+
+/* RATING */
+.phone1_rating,
+.phone2_rating,
+.phone3_rating,
+.phone4_rating {
+    font-size: 13px;
+    color: #388e3c;
+    font-weight: bold;
+}
+
+/* PRICE SECTION */
+.phone1_price,
+.phone2_price,
+.phone3_price,
+.phone4_price,
+.phone5_price {
+    text-align: right;
+}
+
+.phone1_price h2,
+.phone2_price h2,
+.phone3_price h2,
+.phone4_price h2,
+.phone5_price h2 {
+    color: #000;
+    margin-bottom: 10px;
+}
+
+/* BUTTON */
+#add_cart {
+    background: #0c831f;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+#add_cart:hover {
+    background: #0a6e19;
+}
+
+/* DIVIDER */
+hr {
+    border: none;
+    height: 1px;
+    background: #ddd;
+    margin: 0 20px;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+    .phone1,
+    .phone2,
+    .phone3,
+    .phone4,
+    .phone5 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .phone1_price,
+    .phone2_price,
+    .phone3_price,
+    .phone4_price,
+    .phone5_price {
+        text-align: center;
+    }
+
+    .search {
+        width: 60%;
+    }
+}
