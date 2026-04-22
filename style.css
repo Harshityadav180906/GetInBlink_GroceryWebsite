@@ -7,9 +7,15 @@
     }
 
     body{
-        background:#f5fff5;
+    background:#f5fff5;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
     }
 
+    .hero{
+    flex:1; /* pushes footer down */
+    }
     /* HEADER */
     .header{
         display:flex;
