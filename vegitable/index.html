@@ -15,7 +15,7 @@
     <input type="text" placeholder="Search vegetables..." class="search">
     <div class="header-btns">
         <button class="login">Login</button>
-        <button class="cart">🛒 Cart</button>
+        <a href="../Cart/Index.html"><button class="cart">🛒 Cart</button></a>
     </div>
 </header>
 
@@ -45,7 +45,7 @@
             <h3>Potato</h3>
             <div class="price-row">
                 <span>₹30</span>
-                <button>Add</button>
+                <button onclick="addToCart('Potato', 30)" >Add</button>
             </div>
         </div>
 
@@ -55,47 +55,47 @@
             <h3>Tomato</h3>
             <div class="price-row">
                 <span>₹25</span>
-                <button>Add</button>
+                <button onclick="addToCart('Tomato', 25)">Add</button>
             </div>
         </div>
 
         <div class="card">
-            <img src="https://via.placeholder.com/150">
+            <img src="./image/onion.avif">
             <p class="weight">1kg</p>
             <h3>Onion</h3>
             <div class="price-row">
                 <span>₹40</span>
-                <button>Add</button>
+                <button onclick="addToCart('Onion', 40)" >Add</button>
             </div>
         </div>
 
         <div class="card">
-            <img src="https://via.placeholder.com/150">
+            <img src="./image/spnich.webp">
             <p class="weight">250g</p>
             <h3>Spinach</h3>
             <div class="price-row">
                 <span>₹20</span>
-                <button>Add</button>
+                <button onclick="addToCart('Spinach', 20)" >Add</button>
             </div>
         </div>
 
         <div class="card">
-            <img src="https://via.placeholder.com/150">
+            <img src="./image/carrot.webp">
             <p class="weight">500g</p>
             <h3>Carrot</h3>
             <div class="price-row">
                 <span>₹35</span>
-                <button>Add</button>
+                <button onclick="addToCart('Carrot', 35)" >Add</button>
             </div>
         </div>
 
         <div class="card">
-            <img src="https://via.placeholder.com/150">
+            <img src="./image/broccoli.avif">
             <p class="weight">250g</p>
             <h3>Broccoli</h3>
             <div class="price-row">
                 <span>₹60</span>
-                <button>Add</button>
+                <button onclick="addToCart('Broccoli', 60)" >Add</button>
             </div>
         </div>
 
@@ -106,6 +106,6 @@
 <footer class="footer">
     <p>© 2026 FreshVeggies | All Rights Reserved</p>
 </footer>
-
+<script src="./script.js"></script>
 </body>
 </html>
